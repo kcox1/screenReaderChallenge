@@ -10,7 +10,7 @@ One of the bullets you dodged went right through the screen of the Macbook Pro B
 
 Voiceover On.
 
-Cheat Sheet:
+## Cheat Sheet:
 
 - `Command-F5` to start/stop Voiceover
 - `control-option right arrow` move virtual cursor to next item
@@ -25,6 +25,12 @@ Cheat Sheet:
 - `control-option a` start reading
 - `control` stop reading
 - `control-option Home` Jump to top of page
+- `control-option h h` Command Menu (navigate like Rotor) - allows you to find any command you don't know the key command to, or look up the key command
+
+## 3rd Party References
+
+- [Deque VoiceOver Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts#vo-mac-basics)
+- [Apple VoiceOver Basics](https://www.apple.com/voiceover/info/guide/_1124.html)
 
 ## Recommended IDE Setup
 
