@@ -1,13 +1,23 @@
 <script setup>
+import { onMounted } from "vue";
 import { RouterLink, RouterView } from "vue-router";
-
+import { useCookies } from "vue3-cookies";
 import { useAuthStore } from "@/stores/auth";
 
 const authStore = useAuthStore();
+const { cookies } = useCookies();
+
+onMounted(() => {
+  let authCookieValue = cookies.get("evilAuthCookie");
+  if (authCookieValue === 1) {
+    authStore.login();
+  }
+});
 </script>
 
 <template>
   <div class="no-cheating">
+    <a href="#main">Skip to main content</a>
     <header>
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -22,7 +32,7 @@ const authStore = useAuthStore();
         </template>
       </nav>
     </header>
-    <main>
+    <main tabindex="0" id="main">
       <RouterView />
     </main>
     <footer>

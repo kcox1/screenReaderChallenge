@@ -43,6 +43,9 @@
 <script setup>
 import { useAuthStore } from "@/stores/auth";
 import { ref } from "vue";
+import { useCookies } from "vue3-cookies";
+
+const { cookies } = useCookies();
 
 const authStore = useAuthStore();
 const username = ref("");
@@ -58,6 +61,7 @@ function login(e) {
   message.value = "";
   if (username.value === "BossEvil" && password.value === "kitty") {
     authStore.login();
+    cookies.set("evilAuthCookie", 1);
     clearLogin();
     message.value = "access granted!";
     focusTarget.value.focus();
@@ -68,6 +72,7 @@ function login(e) {
 function logout() {
   message.value = "";
   authStore.logout();
+  cookies.set("evilAuthCookie", 0);
   clearLogin();
   message.value = "logout successful. Have an evil day!";
 }
