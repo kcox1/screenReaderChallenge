@@ -10,7 +10,7 @@
     <p>
       <em>
         Reminder not to write down your password on sticky notes taped to your
-        workstation! Violators will be hunted for sport.
+        workstation! Violators will be fed to Boss Evil's cat "kitty".
       </em>
     </p>
 
