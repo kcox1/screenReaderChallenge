@@ -1,35 +1,33 @@
 <template>
-  <main>
-    <h1 ref="focusTarget" tabindex="0">Manual Rocket Control</h1>
+  <p v-if="message" aria-live="polite">
+    {{ message }}
+  </p>
 
-    <p v-if="message" aria-live="polite">
-      {{ message }}
-    </p>
+  <h1 ref="focusTarget" tabindex="0">Manual Rocket Control</h1>
 
-    <h2>Instructions</h2>
+  <h2>Instructions</h2>
+  <p>
+    Enter the hex code for each of the three colors used in the code in the
+    fields below, then press the Execute Command button
+  </p>
+
+  <form @submit="($event) => execute($event)">
     <p>
-      Enter the hex code for each of the three colors used in the code in the
-      fields below, then press the Execute Command button
+      <label for="color1">Color 1:</label>
+      <input type="text" id="color1" v-model="color1" />
     </p>
-
-    <form @submit="($event) => execute($event)">
-      <p>
-        <label for="color1">Color 1:</label>
-        <input type="text" id="color1" v-model="color1" />
-      </p>
-      <p>
-        <label for="color2">Color 2:</label>
-        <input type="text" id="color2" v-model="color2" />
-      </p>
-      <p>
-        <label for="color3">Color 3:</label>
-        <input type="text" id="color3" v-model="color3" />
-      </p>
-      <p>
-        <button type="submit">Execute Command</button>
-      </p>
-    </form>
-  </main>
+    <p>
+      <label for="color2">Color 2:</label>
+      <input type="text" id="color2" v-model="color2" />
+    </p>
+    <p>
+      <label for="color3">Color 3:</label>
+      <input type="text" id="color3" v-model="color3" />
+    </p>
+    <p>
+      <button type="submit">Execute Command</button>
+    </p>
+  </form>
 </template>
 
 <script setup>

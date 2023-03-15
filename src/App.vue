@@ -9,7 +9,7 @@ const { cookies } = useCookies();
 
 onMounted(() => {
   let authCookieValue = cookies.get("evilAuthCookie");
-  if (authCookieValue === 1) {
+  if (authCookieValue === "1") {
     authStore.login();
   }
 });

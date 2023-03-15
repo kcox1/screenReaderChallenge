@@ -1,43 +1,41 @@
 <template>
-  <main>
-    <h1 ref="focusTarget" tabindex="0">Home</h1>
+  <p v-if="message" aria-live="polite">
+    {{ message }}
+  </p>
 
-    <p v-if="message" aria-live="polite">
-      {{ message }}
+  <h1 ref="focusTarget" tabindex="0">Home</h1>
+
+  <div v-if="!authStore.isAuthenticated">
+    <h2>Login</h2>
+    <p>
+      <em>
+        Reminder not to write down your password on sticky notes taped to your
+        workstation! Violators will be hunted for sport.
+      </em>
     </p>
 
-    <div v-if="!authStore.isAuthenticated">
-      <h2>Login</h2>
+    <form @submit="($event) => login($event)">
       <p>
-        <em>
-          Reminder not to write down your password on sticky notes taped to your
-          workstation! Violators will be hunted for sport.
-        </em>
+        <label for="username">Username:</label>
+        <input type="text" id="username" v-model="username" />
       </p>
+      <p>
+        <label for="password">Password:</label>
+        <input type="password" id="password" v-model="password" />
+      </p>
+      <p>
+        <button type="submit">Submit</button>
+      </p>
+    </form>
+  </div>
 
-      <form @submit="($event) => login($event)">
-        <p>
-          <label for="username">Username:</label>
-          <input type="text" id="username" v-model="username" />
-        </p>
-        <p>
-          <label for="password">Password:</label>
-          <input type="password" id="password" v-model="password" />
-        </p>
-        <p>
-          <button type="submit">Submit</button>
-        </p>
-      </form>
-    </div>
+  <div v-if="authStore.isAuthenticated">
+    <h2>Welcome Boss Evil, let's do some evil today!</h2>
 
-    <div v-if="authStore.isAuthenticated">
-      <h2>Welcome Boss Evil, let's do some evil today!</h2>
+    <p>Use the navigation above to execute your diabolical deeds.</p>
 
-      <p>Use the navigation above to execute your diabolical deeds.</p>
-
-      <button @click="logout" type="button">Logout</button>
-    </div>
-  </main>
+    <button @click="logout" type="button">Logout</button>
+  </div>
 </template>
 
 <script setup>
@@ -61,7 +59,7 @@ function login(e) {
   message.value = "";
   if (username.value === "BossEvil" && password.value === "kitty") {
     authStore.login();
-    cookies.set("evilAuthCookie", 1);
+    cookies.set("evilAuthCookie", "1");
     clearLogin();
     message.value = "access granted!";
     focusTarget.value.focus();
@@ -72,7 +70,7 @@ function login(e) {
 function logout() {
   message.value = "";
   authStore.logout();
-  cookies.set("evilAuthCookie", 0);
+  cookies.set("evilAuthCookie", "0");
   clearLogin();
   message.value = "logout successful. Have an evil day!";
 }
