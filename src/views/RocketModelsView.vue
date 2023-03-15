@@ -29,15 +29,17 @@
     constraints forcing construction to be halted in 2019.
   </p>
 
-  <h2>The You In Particular Rocket</h2>
+  <h2>The You Never Existed Rocket</h2>
 
   <img src="" alt="The YIP rocket on the launch pad March 14th, 2023" />
 
   <p>
-    Equipped with a time-travel core stolen from Area 51, this rocket is capable
-    of striking a target in the past. While technically possible, blowing
-    something up in the future is not recommended since it's hard to know what
-    to aim at.
+    Equipped with an improbability drive stolen from Area 51, this rocket is
+    capable of going back in time to strike a target in the past.
+  </p>
+  <p>
+    Note: While technically possible, blowing something up in the future is not
+    recommended since it's hard to know where to aim.
   </p>
 </template>
 
