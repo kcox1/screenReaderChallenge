@@ -17,8 +17,8 @@
 
     <p>
       In the event that the Launch Control Dashboard is unavailable, or has been
-      smashed to bits by meddlesome spies, Manual Control may be implemented by
-      entering codes from the code book directly into the
+      smashed to bits by meddlesome secret agents, Manual Control may be
+      implemented by entering codes from the code book directly into the
       <RouterLink to="/manual-control">Manual Control Override Panel</RouterLink
       >. Please use extreme caution when controlling doomsday machines manually!
     </p>
@@ -30,7 +30,7 @@
       entered to manually control any doomsday rocket. Note that you will need
       to match the code version to the
       <RouterLink to="/rocket-models">Rocket Model</RouterLink> since we change
-      them to keep the spies guessing.
+      them to keep the secret agents guessing.
     </p>
   </div>
 </template>
