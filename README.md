@@ -1,6 +1,8 @@
 # Screen Reader Challenge
 
-It's often hard for sighted persons to learn how to navigate and interact the web using a screen reader, so this project makes the process a bit more fun.
+It's often hard for sighted persons to learn how to navigate and interact the web using a screen reader, so this project gamifies it to make the process a bit more fun. It also utilizes some very simple web pages with good accessibility to keep from overwhelming new users until they gain confidence.
+
+## The Challenge
 
 You are a suave secret agent about to save the world from the evil mastermind Boss Evil who is trying to fire a rocket that will travel back in time to blow up the house where Neil deGrasse Tyson was born. This would erase him from the timeline, deprive the world of his witty scientific teaching, and create an untold number of paradoxes.
 
