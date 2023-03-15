@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Home</h1>
+    <h1 ref="focusTarget" tabindex="0">Home</h1>
 
     <p v-if="message" aria-live="polite">
       {{ message }}
@@ -31,15 +31,9 @@
     </div>
 
     <div v-if="authStore.isAuthenticated">
-      <h2>Welcome Evil Boss, let's do some evil today!</h2>
+      <h2>Welcome Boss Evil, let's do some evil today!</h2>
 
-      <nav>
-        <RouterLink to="/">Authentication</RouterLink>
-        <RouterLink to="/launch-control">Launch Control</RouterLink>
-        <RouterLink to="/fuel-system">Fuel System</RouterLink>
-        <RouterLink to="/code-book">Code Book</RouterLink>
-        <RouterLink to="/help">Help</RouterLink>
-      </nav>
+      <p>Use the navigation above to execute your diabolical deeds.</p>
 
       <button @click="logout" type="button">Logout</button>
     </div>
@@ -47,7 +41,6 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
 import { ref } from "vue";
 
@@ -56,15 +49,18 @@ const username = ref("");
 const password = ref("");
 const message = ref("");
 
+const focusTarget = ref(null);
+
 function login(e) {
   e.preventDefault();
-  // TODO: Make this more secure before the Evil Boss finds
+  // TODO: Make this more secure before Boss Evil finds
   // out and hunts us for sport!
   message.value = "";
-  if (username.value === "EvilBoss" && password.value === "kitty") {
+  if (username.value === "BossEvil" && password.value === "kitty") {
     authStore.login();
     clearLogin();
     message.value = "access granted!";
+    focusTarget.value.focus();
   } else {
     message.value = "Unauthorized Access: Violators will be hunted for sport!";
   }
