@@ -83,7 +83,7 @@ function execute(e) {
     });
     setTimeout(() => {
       router.push({ name: "win" });
-    }, 10000);
+    }, 5000);
   } else if (
     color1.value.toUpperCase() === "0000FF" &&
     color2.value.toUpperCase() === "0000FF" &&

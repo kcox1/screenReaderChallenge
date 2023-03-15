@@ -3,9 +3,17 @@
 
   <p>
     If you're reading this, then you managed to somehow stop my rocket from
-    launching. What you don't know is that the man you subdued to do this was my
-    twin brother! I was never on the island to begin with, and will be back soon
-    with an even more dastardly plan.
+    launching.
+  </p>
+
+  <p>
+    What you don't know is that the man you subdued to do this was my twin
+    brother!
+  </p>
+
+  <p>
+    I was never on the island to begin with, and will be back soon with an even
+    more dastardly plan.
   </p>
 
   <p>Stay evil, B.E.</p>
