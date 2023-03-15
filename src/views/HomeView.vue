@@ -3,7 +3,7 @@
     {{ message }}
   </p>
 
-  <h1 ref="focusTarget" tabindex="0">Home</h1>
+  <h1 ref="focusTarget" tabindex="-1">Home</h1>
 
   <div v-if="!authStore.isAuthenticated">
     <h2>Login</h2>

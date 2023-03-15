@@ -32,7 +32,7 @@ onMounted(() => {
         </template>
       </nav>
     </header>
-    <main tabindex="0" id="main">
+    <main tabindex="-1" id="main">
       <RouterView />
     </main>
     <footer>
@@ -43,7 +43,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.no-cheating2 {
+.no-cheating {
   position: absolute;
   overflow: hidden;
   width: 1px;

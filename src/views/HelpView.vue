@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1 ref="focusTarget" tabindex="0">Evil Help</h1>
+    <h1 ref="focusTarget" tabindex="-1">Evil Help</h1>
 
     <h2>Launch Control</h2>
 

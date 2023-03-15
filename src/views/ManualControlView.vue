@@ -3,7 +3,7 @@
     {{ message }}
   </p>
 
-  <h1 ref="focusTarget" tabindex="0">Manual Rocket Control</h1>
+  <h1 ref="focusTarget" tabindex="-1">Manual Rocket Control</h1>
 
   <h2>Instructions</h2>
   <p>

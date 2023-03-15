@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1 ref="focusTarget" tabindex="0">Launch Control Dashboard</h1>
+    <h1 ref="focusTarget" tabindex="-1">Launch Control Dashboard</h1>
 
     <img src="" alt="man digging with shovel icon" />
 

@@ -1,5 +1,5 @@
 <template>
-  <h1 ref="focusTarget" tabindex="0">Rocket Model Guide</h1>
+  <h1 ref="focusTarget" tabindex="-1">Rocket Model Guide</h1>
 
   <h2>Alpha Rocket</h2>
 

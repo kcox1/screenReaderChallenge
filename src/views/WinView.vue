@@ -1,5 +1,5 @@
 <template>
-  <h1 tabindex="0" ref="focusTarget">I'll get you next time!</h1>
+  <h1 tabindex="-1" ref="focusTarget">I'll get you next time!</h1>
 
   <p>
     If you're reading this, then you managed to somehow stop my rocket from
