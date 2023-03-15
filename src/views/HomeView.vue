@@ -40,7 +40,7 @@
 
 <script setup>
 import { useAuthStore } from "@/stores/auth";
-import { ref } from "vue";
+import { ref, nextTick } from "vue";
 import { useCookies } from "vue3-cookies";
 
 const { cookies } = useCookies();
@@ -64,7 +64,10 @@ function login(e) {
     message.value = "access granted!";
     focusTarget.value.focus();
   } else {
-    message.value = "Unauthorized Access: Violators will be hunted for sport!";
+    nextTick(() => {
+      message.value =
+        "Unauthorized Access: Violators will be hunted for sport!";
+    });
   }
 }
 function logout() {

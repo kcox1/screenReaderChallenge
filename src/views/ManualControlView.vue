@@ -7,32 +7,48 @@
 
   <h2>Instructions</h2>
   <p>
-    Enter the hex code for each of the three colors used in the code in the
-    fields below, then press the Execute Command button
+    Enter the code for each of the three colors used in the code in the fields
+    below, then press the Execute Command button
   </p>
 
   <form @submit="($event) => execute($event)">
     <p>
       <label for="color1">Color 1:</label>
-      <input type="text" id="color1" v-model="color1" />
+      <input
+        type="text"
+        id="color1"
+        v-model="color1"
+        aria-describedby="format"
+      />
     </p>
     <p>
       <label for="color2">Color 2:</label>
-      <input type="text" id="color2" v-model="color2" />
+      <input
+        type="text"
+        id="color2"
+        v-model="color2"
+        aria-describedby="format"
+      />
     </p>
     <p>
       <label for="color3">Color 3:</label>
-      <input type="text" id="color3" v-model="color3" />
+      <input
+        type="text"
+        id="color3"
+        v-model="color3"
+        aria-describedby="format"
+      />
     </p>
     <p>
       <button type="submit">Execute Command</button>
     </p>
+    <p id="format">Use a 6 digit hex color code like FF0000</p>
   </form>
 </template>
 
 <script setup>
 import { useAuthStore } from "@/stores/auth";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 import { useRouter } from "vue-router";
 
 const focusTarget = ref(null);
@@ -52,18 +68,45 @@ const router = useRouter();
 function execute(e) {
   e.preventDefault();
   message.value = "";
+  // Multiple repeated codes were not announcing due to not enough
+  // time between clearing and re-adding the same message for the a11y tree
+  // to catch the change. NextTick got it working!
   if (
-    color1.value === "FF0000" &&
-    color2.value === "00FF00" &&
-    color3.value === "0000FF"
+    color1.value.toUpperCase() === "FF0000" &&
+    color2.value.toUpperCase() === "00FF00" &&
+    color3.value.toUpperCase() === "0000FF"
   ) {
     clearForm();
-    message.value = "Rocket Countdown Halted at 3 seconds to launch.";
+    // nextTick not technically needed here, but I like symmetry
+    nextTick(() => {
+      message.value = "Rocket Countdown Halted at 3 seconds to launch.";
+    });
     setTimeout(() => {
       router.push({ name: "win" });
     }, 10000);
+  } else if (
+    color1.value.toUpperCase() === "0000FF" &&
+    color2.value.toUpperCase() === "0000FF" &&
+    color3.value.toUpperCase() === "00FF00"
+  ) {
+    clearForm();
+    nextTick(() => {
+      message.value = "Rocket Countdown already in progress.";
+    });
+  } else if (
+    color1.value.toUpperCase() === "0000FF" &&
+    color2.value.toUpperCase() === "0000FF" &&
+    color3.value.toUpperCase() === "FF0000"
+  ) {
+    clearForm();
+    nextTick(() => {
+      message.value = "Docking Clamps have already been released";
+    });
   } else {
-    message.value = "Invalid Code!";
+    clearForm();
+    nextTick(() => {
+      message.value = "Invalid Code!";
+    });
   }
 }
 

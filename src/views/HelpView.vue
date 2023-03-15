@@ -9,7 +9,8 @@
       <RouterLink to="/launch-control-dashboard"
         >Launch Control Dashboard</RouterLink
       >is a quick and easy way to fuel, fire and control your doomsday rocket.
-      Simply press the appropriate button and laugh maniacally.
+      Simply press the appropriate button and laugh as the world burns, or pause
+      the countdown to do evil another day.
     </p>
 
     <h2>Manual Control Override</h2>
@@ -17,7 +18,7 @@
     <p>
       In the event that the Launch Control Dashboard is unavailable, or has been
       smashed to bits by meddlesome spies, Manual Control may be implemented by
-      entering hex codes from the code book directly into the
+      entering codes from the code book directly into the
       <RouterLink to="/manual-control">Manual Control Override Panel</RouterLink
       >. Please use extreme caution when controlling doomsday machines manually!
     </p>
