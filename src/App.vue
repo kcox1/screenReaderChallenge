@@ -19,7 +19,7 @@ onMounted(() => {
   <div class="no-cheating">
     <a href="#main">Skip to main content</a>
     <header>
-      <nav>
+      <nav aria-label="primary navigation">
         <RouterLink to="/">Home</RouterLink>
         <template v-if="authStore.isAuthenticated">
           <RouterLink to="/launch-control-dashboard"
@@ -43,14 +43,18 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.no-cheating {
+.no-cheating,
+.no-cheating * {
   position: absolute;
+  left: -1000px;
   overflow: hidden;
-  width: 1px;
-  height: 1px;
+  width: 0px;
+  height: 0px;
   margin: -1px;
   padding: 0;
   border: 0;
   clip: rect(0 0 0 0);
+  font-size: 0;
+  line-height: 0;
 }
 </style>
