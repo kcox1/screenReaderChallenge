@@ -9,7 +9,7 @@ It's often hard for sighted persons to learn how to navigate and interact the we
 
 ## The Challenge
 
-You are a suave secret agent about to save the world from Boss Evil, a diabolical mastermind who is plotting to fire a rocket that will travel back in time and blow up Neil deGrasse Tyson while he’s still in elementary school. This would erase him from the timeline before he’s able to influence the IAU into classifying Pluto as a dwarf planet - something Boss Evil has very strong opinions about.
+You are a suave secret agent about to save the world from Boss Evil, a diabolical mastermind who is plotting to fire a rocket that will travel back in time and blow up Neil deGrasse Tyson while he’s still a grad student. This would erase him from the timeline before he’s able to influence the IAU into classifying Pluto as a dwarf planet - something Boss Evil has very strong opinions about.
 
 After freeing yourself from Boss Evil's evil dungeon using your wristwatch laser, subduing his henchmen with your mad judo skills, and dodging his pistol fire, you knock Boss Evil unconscious with a flying spin kick. Now, all you have to do is stop the rocket launch, but... OH NO!!!
 
