@@ -4,11 +4,13 @@ It's often hard for sighted persons to learn how to navigate and interact the we
 
 ## The Challenge
 
-You are a suave secret agent about to save the world from the evil mastermind Boss Evil who is trying to fire a rocket that will travel back in time to blow up the house where Neil deGrasse Tyson was born. This would erase him from the timeline, deprive the world of his witty scientific teaching, and create an untold number of paradoxes.
+You are a suave secret agent about to save the world from Boss Evil, a diabolical mastermind who is plotting to fire a rocket that will travel back in time and blow up Neil deGrasse Tyson while he’s still in elementary school. This would erase him from the timeline before he’s able to influence the IAU into classifying Pluto as a dwarf planet - something Boss Evil has very strong opinions about.
 
 After freeing yourself from Boss Evil's evil dungeon using your wristwatch laser, subduing his henchmen with your mad judo skills, and dodging his pistol fire, you knock Boss Evil unconscious with a flying spin kick. Now, all you have to do is stop the rocket launch, but... OH NO!!!
 
-One of the bullets you dodged went right through the screen of the Macbook Pro Boss Evil was using to control the launch. The machine is still running, but the screen is toast. Without being able to see the interface, how can you stop the rocket from erasing Neil? Remembering that all Macs come with VoiceOver built in, you hit Command-F5, crack your knuckles and hope that the Evil League of Evil made their software with good accessibility.
+One of the bullets you dodged went right through the screen of the MacBook Pro Boss Evil was using to control the launch. The machine is somehow still running, but the screen is toast. There’s no cable or monitor nearby. Without being able to see the interface, how can you stop the rocket from launching and erasing Neil?
+
+Remembering that all Macs come with VoiceOver built in, you hit Command-F5, crack your knuckles and hope that the Evil League of Evil makes their software with good accessibility.
 
 Voiceover On.
 
