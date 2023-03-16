@@ -24,7 +24,7 @@
         <input type="password" id="password" v-model="password" />
       </p>
       <p>
-        <button type="submit">Submit</button>
+        <button type="submit">Log In</button>
       </p>
     </form>
   </div>
