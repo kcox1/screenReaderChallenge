@@ -2,6 +2,11 @@
 
 It's often hard for sighted persons to learn how to navigate and interact the web using a screen reader, so this project gamifies it to make the process a bit more fun. It also utilizes some very simple web pages with good accessibility to keep from overwhelming new users until they gain confidence.
 
+- What if instead of “testing something”, you actually _needed_ to use a screen reader to get information?
+- What if you really couldn’t see the UI?
+- How would that change your perception of what a web page actually was?
+- What if the fate of the world depended upon your success?
+
 ## The Challenge
 
 You are a suave secret agent about to save the world from Boss Evil, a diabolical mastermind who is plotting to fire a rocket that will travel back in time and blow up Neil deGrasse Tyson while he’s still in elementary school. This would erase him from the timeline before he’s able to influence the IAU into classifying Pluto as a dwarf planet - something Boss Evil has very strong opinions about.
