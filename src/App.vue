@@ -18,7 +18,8 @@ onMounted(() => {
 <template>
   <div class="no-cheating">
     <a href="#main">Skip to main content</a>
-    <header>
+    <header aria-label="header">
+      <img src="" alt="Boss Evil Logo" />
       <nav aria-label="primary navigation">
         <RouterLink to="/">Home</RouterLink>
         <template v-if="authStore.isAuthenticated">
@@ -35,7 +36,7 @@ onMounted(() => {
     <main tabindex="-1" id="main">
       <RouterView />
     </main>
-    <footer>
+    <footer aria-label="footer">
       &copy; 2023 BossEvil Enterprises, a subsidiary of the Evil League of Evil
       Inc.
     </footer>
