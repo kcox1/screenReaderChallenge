@@ -19,6 +19,13 @@ Remembering that all Macs come with VoiceOver built in, you hit Command-F5, crac
 
 Voiceover On.
 
+<center>
+  <img
+    src="src/assets/button-challenge-accepted.png"
+    alt="Text button that reads Challenge Accepted"
+    style="max-width:50%;width:250px;height:auto;" />
+</center>
+
 ## Cheat Sheet:
 
 - `Command-F5` to start/stop Voiceover
