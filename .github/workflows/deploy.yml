@@ -2,6 +2,9 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    # Defaults + ready_for_review to trigger a re-run when a Draft PR is converted to a normal PR
+    # See: https://github.community/t/dont-run-actions-on-draft-pull-requests/16817/17
+    types: [opened, synchronize, reopened, ready_for_review]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
