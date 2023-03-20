@@ -20,10 +20,15 @@ Remembering that all Macs come with VoiceOver built in, you hit Command-F5, crac
 Voiceover On.
 
 <center>
-  <img
-    src="src/assets/button-challenge-accepted.png"
-    alt="Text button that reads Challenge Accepted"
-    style="max-width:50%;width:250px;height:auto;" />
+  <p>
+    <a href="https://kcox1.github.io/screenReaderChallenge/" target="_blank"
+      aria-label="Visit the screen reader challenge site">
+      <img
+        src="src/assets/button-challenge-accepted.png"
+        alt="Screen reader challenge site"
+        style="max-width:50%;width:250px;height:auto;" />
+    </a>
+  </p>
 </center>
 
 ## Cheat Sheet:
