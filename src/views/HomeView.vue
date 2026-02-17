@@ -57,7 +57,7 @@ function login(e) {
   // TODO: Make this more secure before Boss Evil finds
   // out and hunts us for sport!
   message.value = "";
-  if (username.value === "BossEvil" && password.value === "kitty") {
+  if (username.value === "bossevil" && password.value === "pluto1930") {
     authStore.login();
     cookies.set("evilAuthCookie", "1");
     clearLogin();
