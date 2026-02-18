@@ -46,9 +46,8 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.no-cheating,
-.no-cheating * {
-  position: absolute;
+.no-cheating{
+  /* position: absolute;
   left: -1000px;
   overflow: hidden;
   width: 0px;
@@ -58,6 +57,6 @@ onMounted(() => {
   border: 0;
   clip: rect(0 0 0 0);
   font-size: 0;
-  line-height: 0;
+  line-height: 0; */
 }
 </style>

@@ -1,16 +1,12 @@
 <template>
-  <p v-if="message" aria-live="polite">
-    {{ message }}
-  </p>
 
-  <h1 ref="focusTarget" tabindex="-1">Home</h1>
+  <h1 tabindex="-1">Home</h1>
 
   <div v-if="!authStore.isAuthenticated">
-    <h2>Login</h2>
+    <h2 tabindex="-1" ref="loggedOutHeading">Authenticate to access the Evil Rocket Control System</h2>
     <p>
       <em>
-        Reminder not to write down your password on sticky notes taped to your
-        workstation! Violators will be fed to Boss Evil's cat "kitty".
+        Reminder: Do not use insecure passwords such as pet names or the year pluto was discovered.
       </em>
     </p>
 
@@ -29,10 +25,10 @@
     </form>
   </div>
 
-  <div v-if="authStore.isAuthenticated">
-    <h2>Welcome Boss Evil, let's do some evil today!</h2>
+  <div v-else>
+    <h2 tabindex="-1" ref="loggedInHeading">Welcome Boss Evil, let's do some evil today!</h2>
 
-    <p>Use the navigation above to execute your diabolical deeds.</p>
+    <p>Select from the navigation above to execute your diabolical deeds.</p>
 
     <button @click="logout" type="button">Logout</button>
   </div>
@@ -42,40 +38,44 @@
 import { useAuthStore } from "@/stores/auth";
 import { ref, nextTick } from "vue";
 import { useCookies } from "vue3-cookies";
+import { useMessagesStore } from '@/stores/messages'
+
+const messagesStore = useMessagesStore()
 
 const { cookies } = useCookies();
 
 const authStore = useAuthStore();
 const username = ref("");
 const password = ref("");
-const message = ref("");
 
-const focusTarget = ref(null);
+const loggedInHeading = ref();
+const loggedOutHeading = ref();
 
 function login(e) {
   e.preventDefault();
-  // TODO: Make this more secure before Boss Evil finds
-  // out and hunts us for sport!
-  message.value = "";
-  if (username.value === "bossevil" && password.value === "pluto1930") {
+  // TODO: Make this more secure before Boss Evil finds out and hunts us for sport!
+  console.log("Username", username.value.toLowerCase());
+  console.log("Password", password.value.toLowerCase());
+  if (username.value.toLowerCase() === "bossevil" && password.value.toLowerCase() === "kitty1930") {
     authStore.login();
     cookies.set("evilAuthCookie", "1");
     clearLogin();
-    message.value = "access granted!";
-    focusTarget.value.focus();
-  } else {
+    messagesStore.addMessage("Access granted!");
     nextTick(() => {
-      message.value =
-        "Unauthorized Access: Violators will be hunted for sport!";
+      loggedInHeading.value?.focus();
     });
+  } else {
+    messagesStore.addMessage("Unauthorized Access: Violators will be hunted for sport!");
   }
 }
 function logout() {
-  message.value = "";
   authStore.logout();
   cookies.set("evilAuthCookie", "0");
   clearLogin();
-  message.value = "logout successful. Have an evil day!";
+  messagesStore.addMessage("Logout successful. Have an evil day!");
+  nextTick(() => {
+    loggedOutHeading.value?.focus();
+  });
 }
 
 function clearLogin() {
