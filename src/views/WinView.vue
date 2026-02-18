@@ -7,8 +7,7 @@
   </p>
 
   <p>
-    What you don't know is that the man you subdued to do this was my twin
-    brother!
+    What you don't know is that the man you must have subdued to accomplish this was a clone!
   </p>
 
   <p>

@@ -9,7 +9,7 @@
 
 body {
   min-height: 100vh;
-  background: no-repeat center/100% url("./background.jpg");
+  /* background: no-repeat center/100% url("./background.jpg"); */
   line-height: 1.6;
   font-family: Arial, Helvetica, 'sans-serif';
   font-size: 15px;

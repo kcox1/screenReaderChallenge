@@ -3,6 +3,7 @@ import { onMounted } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import { useCookies } from "vue3-cookies";
 import { useAuthStore } from "@/stores/auth";
+import Announcer from "@/components/Announcer.vue";
 
 const authStore = useAuthStore();
 const { cookies } = useCookies();
@@ -37,16 +38,16 @@ onMounted(() => {
       <RouterView />
     </main>
     <footer aria-label="footer">
-      &copy; 2023 BossEvil Enterprises, a subsidiary of the Evil League of Evil
+      &copy; 2026 BossEvil Enterprises, a subsidiary of the Evil League of Evil inc.
       Inc.
     </footer>
+    <Announcer />
   </div>
 </template>
 
 <style scoped>
-.no-cheating,
-.no-cheating * {
-  position: absolute;
+.no-cheating{
+  /* position: absolute;
   left: -1000px;
   overflow: hidden;
   width: 0px;
@@ -56,6 +57,6 @@ onMounted(() => {
   border: 0;
   clip: rect(0 0 0 0);
   font-size: 0;
-  line-height: 0;
+  line-height: 0; */
 }
 </style>
