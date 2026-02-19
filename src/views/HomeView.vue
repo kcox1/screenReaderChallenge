@@ -6,7 +6,7 @@
     <h2 tabindex="-1" ref="loggedOutHeading">Authenticate to access the Evil Rocket Control System</h2>
     <p>
       <em>
-        Reminder: Do not use insecure passwords such as pet names or the year pluto was discovered.
+        Reminder: Do not write passwords on sticky notes.
       </em>
     </p>
 
@@ -18,6 +18,7 @@
       <p>
         <label for="password">Password:</label>
         <input type="password" id="password" v-model="password" />
+        <button type="button" @click="passwordHint">Forgot password?</button>
       </p>
       <p>
         <button type="submit">Log In</button>
@@ -56,7 +57,7 @@ function login(e) {
   // TODO: Make this more secure before Boss Evil finds out and hunts us for sport!
   console.log("Username", username.value.toLowerCase());
   console.log("Password", password.value.toLowerCase());
-  if (username.value.toLowerCase() === "bossevil" && password.value.toLowerCase() === "kitty1930") {
+  if (username.value.toLowerCase() === "bossevil" && password.value.toLowerCase() === "kitty1987") {
     authStore.login();
     cookies.set("evilAuthCookie", "1");
     clearLogin();
@@ -81,5 +82,13 @@ function logout() {
 function clearLogin() {
   username.value = "";
   password.value = "";
+}
+
+function passwordHint() {
+  if(username.value.toLowerCase() === "bossevil") {
+    messagesStore.addMessage("Your password hint is: your pet name plus the year BossEvil Enterprises was founded");
+  } else {
+    messagesStore.addMessage("Enter a valid username to receive a password hint");
+  }
 }
 </script>

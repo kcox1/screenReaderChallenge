@@ -38,7 +38,11 @@ const router = createRouter({
       path: '/win',
       name: 'win',
       component: () => import('../views/WinView.vue')
-    }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
+    },
   ]
 })
 
