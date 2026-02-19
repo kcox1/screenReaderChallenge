@@ -7,7 +7,7 @@
     Doctor Evil is the mastermind behind all of our evil plans. After dropping out of graduate school in 1987, he dedicated himself to working on his doomsday devices and evil full-time.
   </p>
   <p>
-    He lives the bachelor lifestyle on his private island lair, where he is surrounded by his loyal henchmen and hench women and his cat named "kitty". He is known for his love of cats, his unconventional fashion sense, and his penchant for mono logging about his evil plans.
+    He lives the bachelor lifestyle on his private island lair, where he is surrounded by his loyal henchmen and hench women and his cat named "kitty". He is known for his love of cats, his unconventional fashion sense, and his penchant for monologuing about his evil plans.
   </p>
 
   <h2>Launch Control</h2>
@@ -36,7 +36,7 @@
   <p>
     Codes from the <RouterLink to="/code-book">Code Book</RouterLink> may be
     entered to manually control any doomsday rocket. Note that you will need
-    to match the code version to the
+    to match the code to the
     <RouterLink to="/rocket-models">Rocket Model</RouterLink> since we change
     them to keep the secret agents guessing.
   </p>

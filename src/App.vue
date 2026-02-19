@@ -30,8 +30,8 @@ onMounted(() => {
           <RouterLink to="/manual-control">Manual Control</RouterLink>
           <RouterLink to="/rocket-models">Rocket Models</RouterLink>
           <RouterLink to="/code-book">Code Book</RouterLink>
-          <RouterLink to="/help">Help</RouterLink>
         </template>
+        <RouterLink to="/help">Help</RouterLink>
       </nav>
     </header>
     <main tabindex="-1" id="main">
