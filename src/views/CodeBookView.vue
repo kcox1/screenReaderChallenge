@@ -3,40 +3,53 @@
     <h1 ref="focusTarget" tabindex="-1">Code Book</h1>
 
     <p>
-      CAUTION! Be sure to use the correct
-      <RouterLink to="/rocket-models">Rocket Model</RouterLink> so we don't have
-      a repeat of the 2019 incident where we accidentally blew up our own skull
-      shaped volcano island.
+      This code book contains all required documentation for rocket codes.
     </p>
 
-    <Expandable title="Alpha Rocket">
-      <ul>
-        <li>Start Launch Countdown: blue, blue, green</li>
-        <li>Release Docking Clamps: blue, blue, red</li>
-        <li>Abort Launch: red, red, red</li>
-      </ul>
-    </Expandable>
-    <Expandable title="Beta Rocket">
-      <ul>
-        <li>Start Launch Countdown: blue, blue, red</li>
-        <li>Release Docking Clamps: blue, red, red</li>
-        <li>Abort Launch: blue, green, red</li>
-      </ul>
-    </Expandable>
-    <Expandable title="Omega Rocket">
-      <ul>
-        <li>Start Launch Countdown: blue, blue, red</li>
-        <li>Release Docking Clamps: green, green, blue</li>
-        <li>Abort Launch: red, green, blue</li>
-      </ul>
-    </Expandable>
-    <Expandable title="Delta Rocket">
-      <ul>
-        <li>Start Launch Countdown: green, green, blue</li>
-        <li>Release Docking Clamps: blue, green, blue</li>
-        <li>Abort Launch: blue, red, red</li>
-      </ul>
-    </Expandable>
+
+    <section aria-labelledby="prefixes">
+      <h2 id="prefixes">Rocket Code Prefixes</h2>
+
+      <p>
+        CAUTION! Be sure to use the correct <RouterLink to="/rocket-models">Rocket Model</RouterLink> since each has their own unique code prefixes.
+      </p>
+
+      <Expandable title="Alpha Rocket">
+        <p>Code prefix: blue, blue, green</p>
+      </Expandable>
+      <Expandable title="Beta Rocket">
+        <p>Code prefix: green, green, red</p>
+      </Expandable>
+      <Expandable title="Omega Rocket">
+        <p>Code prefix: red, red, blue</p>
+      </Expandable>
+      <Expandable title="Delta Rocket">
+        <p>Code prefix: blue, red, green</p>
+      </Expandable>
+    </section>
+
+    <section aria-labelledby="command-codes">
+      <h2 id="command-codes">Rocket Command Codes</h2>
+
+      <p>Append this code to any rocket code prefix to form a complete 4 color command sequence</p>
+
+      <Expandable title="Start Launch Countdown">
+        <p>Initiates the launch countdown sequence. The rocket will launch when the countdown reaches zero.</p>
+        <p>Command code: red</p>
+      </Expandable>
+
+      <Expandable title="Release Docking Clamps">
+        <p>Releases the docking clamps that hold the rocket in place.</p>
+        <p>Command code: blue</p>
+      </Expandable>
+
+      <Expandable title="Abort Launch">
+        <p>Aborts the launch sequence and resets the rocket to a safe state.</p>
+        <p>Command code: green</p>
+      </Expandable>
+
+    </section>
+
   </div>
 </template>
 
