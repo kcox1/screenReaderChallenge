@@ -6,7 +6,7 @@
     <h2 tabindex="-1" ref="loggedOutHeading">Authenticate to access the Evil Rocket Control System</h2>
     <p>
       <em>
-        Reminder: Do not use insecure passwords such as pet names or the year pluto was discovered.
+        Reminder: Do not write passwords on sticky notes.
       </em>
     </p>
 
