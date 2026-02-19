@@ -34,7 +34,7 @@ Voiceover On.
 - `Command-F5` to start/stop Voiceover
 - `control-option right arrow` move virtual cursor to next item
 - `control-option left arrow` move virtual cursor to previous item
-- `control-option up/down arrow` Go in/out of objects like iFrames, menus, regions
+- `control-option shift up/down arrow` Go in/out of objects like iFrames, menus, regions
 - `control-option space` activate link or form control (click)
 - `control-option u` to open the Rotor
   - Use `left/right arrow` inside rotor to select panes
